@@ -1,0 +1,18 @@
+name: WheatArmor
+version: '1.0-SNAPSHOT'
+main: ar1hurgit.wheatarmor.WheatArmor
+api-version: '1.21'
+commands:
+  wheatarmor:
+    description: Open Wheat Armor shop
+    usage: /wheatarmor
+  woodarmor:
+    description: Open Wood Armor shop
+    usage: /woodarmor
+  cavearmor:
+    description: Open Cave Armor shop
+    usage: /cavearmor
+permissions:
+  wheatarmor.admin:
+    description: Allows use of admin commands
+    default: op
