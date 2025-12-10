@@ -1,0 +1,311 @@
+armor-sets:
+  wheat:
+    fragment:
+      name: "&eWheat Fragment"
+      material: GHAST_TEAR
+      model-data: 1001
+      lore:
+        - "&7Used to buy Wheat Armor"
+    head:
+      name: "&eWheat Helmet"
+      material: LEATHER_HELMET
+      price: 5
+      model-data: 1001
+      lore:
+        - "&7A helmet made of wheat."
+        - "&7A helmet made of wheat."
+
+    chest:
+      name: "&eWheat Chestplate"
+      material: LEATHER_CHESTPLATE
+      price: 8
+      model-data: 1001
+      lore:
+        - "&7A chestplate made of wheat."
+    legs:
+      name: "&eWheat Leggings"
+      material: LEATHER_LEGGINGS
+      price: 7
+      model-data: 1001
+      lore:
+        - "&7Leggings made of wheat."
+    boots:
+      name: "&eWheat Boots"
+      material: LEATHER_BOOTS
+      price: 4
+      model-data: 1001
+      lore:
+        - "&7Boots made of wheat."
+  wood:
+    fragment:
+      name: "&6Wood Fragment"
+      material: GHAST_TEAR
+      model-data: 1002
+      lore:
+        - "&7Used to buy Wood Armor"
+    head:
+      name: "&6Wood Helmet"
+      material: LEATHER_HELMET
+      price: 10
+      model-data: 1002
+      lore:
+        - "&7Sturdy wooden helmet."
+    chest:
+      name: "&6Wood Chestplate"
+      material: LEATHER_CHESTPLATE
+      price: 16
+      model-data: 1002
+      lore:
+        - "&7Sturdy wooden chestplate."
+    legs:
+      name: "&6Wood Leggings"
+      material: LEATHER_LEGGINGS
+      price: 14
+      model-data: 1002
+      lore:
+        - "&7Sturdy wooden leggings."
+    boots:
+      name: "&6Wood Boots"
+      material: LEATHER_BOOTS
+      price: 8
+      model-data: 1002
+      lore:
+        - "&7Sturdy wooden boots."
+  cave:
+    fragment:
+      name: "&bCave Fragment"
+      material: GHAST_TEAR
+      model-data: 1003
+      lore:
+        - "&7Used to buy Cave Armor"
+    head:
+      name: "&bCave Helmet"
+      material: IRON_HELMET
+      price: 20
+      model-data: 1003
+      lore:
+        - "&7Forged in the depths."
+    chest:
+      name: "&bCave Chestplate"
+      material: IRON_CHESTPLATE
+      price: 32
+      model-data: 1003
+      lore:
+        - "&7Forged in the depths."
+    legs:
+      name: "&bCave Leggings"
+      material: IRON_LEGGINGS
+      price: 28
+      model-data: 1003
+      lore:
+        - "&7Forged in the depths."
+    boots:
+      name: "&bCave Boots"
+      material: IRON_BOOTS
+      price: 16
+      model-data: 1003
+      lore:
+        - "&7Forged in the depths."
+
+drops:
+  # Crops -> Wheat Fragment
+  wheat_drop:
+    block: WHEAT
+    chance: 25.0
+    fragment-type: wheat
+  carrots_drop:
+    block: CARROTS
+    chance: 25.0
+    fragment-type: wheat
+  potatoes_drop:
+    block: POTATOES
+    chance: 25.0
+    fragment-type: wheat
+  beetroots_drop:
+    block: BEETROOTS
+    chance: 25.0
+    fragment-type: wheat
+  sugar_cane_drop:
+    block: SUGAR_CANE
+    chance: 25.0
+    fragment-type: wheat
+  nether_wart_drop:
+    block: NETHER_WART
+    chance: 25.0
+    fragment-type: wheat
+  tube_coral_drop:
+    block: TUBE_CORAL
+    chance: 25.0
+    fragment-type: wheat
+  brain_coral_drop:
+    block: BRAIN_CORAL
+    chance: 25.0
+    fragment-type: wheat
+  bubble_coral_drop:
+    block: BUBBLE_CORAL
+    chance: 25.0
+    fragment-type: wheat
+  fire_coral_drop:
+    block: FIRE_CORAL
+    chance: 25.0
+    fragment-type: wheat
+  horn_coral_drop:
+    block: HORN_CORAL
+    chance: 25.0
+    fragment-type: wheat
+  dead_bush_drop:
+    block: DEAD_BUSH
+    chance: 10.0
+    fragment-type: wheat
+  pale_oak_sapling_drop:
+    block: PALE_OAK_SAPLING
+    chance: 25.0
+    fragment-type: wheat
+  cherry_sapling_drop:
+    block: CHERRY_SAPLING
+    chance: 25.0
+    fragment-type: wheat
+  pink_petals_drop:
+    block: PINK_PETALS
+    chance: 25.0
+    fragment-type: wheat
+  
+  # Wood -> Wood Fragment
+  oak_log_drop:
+    block: OAK_LOG
+    chance: 20.0
+    fragment-type: wood
+  spruce_log_drop:
+    block: SPRUCE_LOG
+    chance: 20.0
+    fragment-type: wood
+  birch_log_drop:
+    block: BIRCH_LOG
+    chance: 20.0
+    fragment-type: wood
+  jungle_log_drop:
+    block: JUNGLE_LOG
+    chance: 20.0
+    fragment-type: wood
+  dark_oak_log_drop:
+    block: DARK_OAK_LOG
+    chance: 20.0
+    fragment-type: wood
+  acacia_log_drop:
+    block: ACACIA_LOG
+    chance: 20.0
+    fragment-type: wood
+  cherry_log_drop:
+    block: CHERRY_LOG
+    chance: 20.0
+    fragment-type: wood
+  mangrove_log_drop:
+    block: MANGROVE_LOG
+    chance: 20.0
+    fragment-type: wood
+  pale_oak_log_drop:
+    block: PALE_OAK_LOG
+    chance: 20.0
+    fragment-type: wood
+  crimson_stem_drop:
+    block: CRIMSON_STEM
+    chance: 20.0
+    fragment-type: wood
+  warped_stem_drop:
+    block: WARPED_STEM
+    chance: 20.0
+    fragment-type: wood
+    
+  # Ores -> Cave Fragment
+  iron_ore_drop:
+    block: IRON_ORE
+    chance: 15.0
+    fragment-type: cave
+  deepslate_iron_ore_drop:
+    block: DEEPSLATE_IRON_ORE
+    chance: 15.0
+    fragment-type: cave
+  gold_ore_drop:
+    block: GOLD_ORE
+    chance: 10.0
+    fragment-type: cave
+  deepslate_gold_ore_drop:
+    block: DEEPSLATE_GOLD_ORE
+    chance: 10.0
+    fragment-type: cave
+  nether_gold_ore_drop:
+    block: NETHER_GOLD_ORE
+    chance: 15.0
+    fragment-type: cave
+  copper_ore_drop:
+    block: COPPER_ORE
+    chance: 20.0
+    fragment-type: cave
+  deepslate_copper_ore_drop:
+    block: DEEPSLATE_COPPER_ORE
+    chance: 20.0
+    fragment-type: cave
+  coal_ore_drop:
+    block: COAL_ORE
+    chance: 20.0
+    fragment-type: cave
+  deepslate_coal_ore_drop:
+    block: DEEPSLATE_COAL_ORE
+    chance: 20.0
+    fragment-type: cave
+  redstone_ore_drop:
+    block: REDSTONE_ORE
+    chance: 15.0
+    fragment-type: cave
+  deepslate_redstone_ore_drop:
+    block: DEEPSLATE_REDSTONE_ORE
+    chance: 15.0
+    fragment-type: cave
+  lapis_ore_drop:
+    block: LAPIS_ORE
+    chance: 15.0
+    fragment-type: cave
+  deepslate_lapis_ore_drop:
+    block: DEEPSLATE_LAPIS_ORE
+    chance: 15.0
+    fragment-type: cave
+  emerald_ore_drop:
+    block: EMERALD_ORE
+    chance: 5.0
+    fragment-type: cave
+  deepslate_emerald_ore_drop:
+    block: DEEPSLATE_EMERALD_ORE
+    chance: 5.0
+    fragment-type: cave
+  diamond_ore_drop:
+    block: DIAMOND_ORE
+    chance: 5.0
+    fragment-type: cave
+  deepslate_diamond_ore_drop:
+    block: DEEPSLATE_DIAMOND_ORE
+    chance: 5.0
+    fragment-type: cave
+  amethyst_block_drop:
+    block: AMETHYST_BLOCK
+    chance: 15.0
+    fragment-type: cave
+  red_glazed_terracotta_drop:
+    block: RED_GLAZED_TERRACOTTA
+    chance: 15.0
+    fragment-type: cave
+  lime_glazed_terracotta_drop:
+    block: LIME_GLAZED_TERRACOTTA
+    chance: 15.0
+    fragment-type: cave
+  light_blue_glazed_terracotta_drop:
+    block: LIGHT_BLUE_GLAZED_TERRACOTTA
+    chance: 15.0
+    fragment-type: cave
+  purple_glazed_terracotta_drop:
+    block: PURPLE_GLAZED_TERRACOTTA
+    chance: 15.0
+    fragment-type: cave
+  honeycomb_block_drop:
+    block: HONEYCOMB_BLOCK
+    chance: 15.0
+    fragment-type: cave
