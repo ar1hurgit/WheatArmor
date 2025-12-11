@@ -1,5 +1,9 @@
 package ar1hurgit.wheatarmor;
 
+import ar1hurgit.wheatarmor.command.ArmorCommand;
+import ar1hurgit.wheatarmor.listener.DropListener;
+import ar1hurgit.wheatarmor.manager.ConfigManager;
+import ar1hurgit.wheatarmor.manager.GuiManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class WheatArmor extends JavaPlugin {
@@ -23,13 +27,14 @@ public final class WheatArmor extends JavaPlugin {
         // Register listeners
         getServer().getPluginManager().registerEvents(new DropListener(this), this);
         getServer().getPluginManager().registerEvents(guiManager, this);
+        getServer().getPluginManager().registerEvents(new ar1hurgit.wheatarmor.listener.ArmorChangeListener(this),
+                this);
 
-        getLogger().info("WheatArmor enabled successfully!");
+        getLogger().info("WheatArmor enabled successfully");
     }
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
     }
 
     public ConfigManager getConfigManager() {

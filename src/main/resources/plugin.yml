@@ -6,13 +6,35 @@ commands:
   wheatarmor:
     description: Open Wheat Armor shop
     usage: /wheatarmor
+  wheatarmoradmin:
+    description: Admin Wheat Armor shop
+    usage: /wheatarmor admin
+
   woodarmor:
     description: Open Wood Armor shop
     usage: /woodarmor
+  woodarmoradmin:
+    description: Admin Wood Armor shop
+    usage: /woodarmor admin
+
   cavearmor:
     description: Open Cave Armor shop
     usage: /cavearmor
+  cavearmoradmin:
+    description: Admin Cave Armor shop
+    usage: /cavearmor admin
+
+  wheatarmoradmingive:
+    description: Give armor to a player
+    usage: /wheatarmor admin give <player> <armor>
+  woodarmoradmingive:
+    description: Give armor to a player
+    usage: /woodarmor admin give <player> <armor>
+  cavearmoradmingive:
+    description: Give armor to a player
+    usage: /cavearmor admin give <player> <armor>
+
 permissions:
   wheatarmor.admin:
-    description: Allows use of admin commands
+    description: Allows admin access to WheatArmor
     default: op

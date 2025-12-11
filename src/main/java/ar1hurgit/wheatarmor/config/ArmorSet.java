@@ -1,4 +1,4 @@
-package ar1hurgit.wheatarmor;
+package ar1hurgit.wheatarmor.config;
 
 import org.bukkit.Material;
 import java.util.List;
@@ -47,9 +47,7 @@ public class ArmorSet {
         return fragmentLore;
     }
 
-    public ArmorPiece getHead() {
-        return head;
-    }
+    public ArmorPiece getHead() {return head;}
 
     public ArmorPiece getChest() {
         return chest;

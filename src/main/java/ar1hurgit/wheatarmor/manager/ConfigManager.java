@@ -1,5 +1,7 @@
-package ar1hurgit.wheatarmor;
+package ar1hurgit.wheatarmor.manager;
 
+import ar1hurgit.wheatarmor.config.ArmorSet;
+import ar1hurgit.wheatarmor.WheatArmor;
 import org.bukkit.Material;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -8,7 +10,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 public class ConfigManager {
     private final WheatArmor plugin;

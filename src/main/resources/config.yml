@@ -13,7 +13,6 @@ armor-sets:
       model-data: 1001
       lore:
         - "&7A helmet made of wheat."
-        - "&7A helmet made of wheat."
 
     chest:
       name: "&eWheat Chestplate"

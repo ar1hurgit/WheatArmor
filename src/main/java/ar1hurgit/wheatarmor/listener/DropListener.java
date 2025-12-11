@@ -1,7 +1,9 @@
-package ar1hurgit.wheatarmor;
+package ar1hurgit.wheatarmor.listener;
 
+import ar1hurgit.wheatarmor.WheatArmor;
+import ar1hurgit.wheatarmor.config.ArmorSet;
+import ar1hurgit.wheatarmor.manager.ConfigManager;
 import org.bukkit.Material;
-import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
@@ -20,7 +22,6 @@ public class DropListener implements Listener {
 
     @EventHandler
     public void onBlockBreak(BlockBreakEvent event) {
-        // Check for block drops defined in config
         ConfigManager.DropInfo dropInfo = plugin.getConfigManager().getDropInfo(event.getBlock().getType());
 
         if (dropInfo != null) {
