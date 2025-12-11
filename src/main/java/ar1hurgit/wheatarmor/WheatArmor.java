@@ -23,6 +23,8 @@ public final class WheatArmor extends JavaPlugin {
         getCommand("wheatarmor").setExecutor(armorCommand);
         getCommand("woodarmor").setExecutor(armorCommand);
         getCommand("cavearmor").setExecutor(armorCommand);
+        getCommand("richearmor").setExecutor(armorCommand);
+        getCommand("sagearmor").setExecutor(armorCommand);
 
         // Register listeners
         getServer().getPluginManager().registerEvents(new DropListener(this), this);

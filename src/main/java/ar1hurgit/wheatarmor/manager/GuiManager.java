@@ -52,7 +52,8 @@ public class GuiManager implements Listener {
 
             List<String> lore = new ArrayList<>();
             if (set.getFragmentLore() != null) {
-                for (String l : set.getFragmentLore()) lore.add(l.replace("&", "§"));
+                for (String l : set.getFragmentLore())
+                    lore.add(l.replace("&", "§"));
             }
             lore.add("");
             if (isAdmin) {
@@ -77,7 +78,8 @@ public class GuiManager implements Listener {
 
             List<String> lore = new ArrayList<>();
             if (piece.getLore() != null) {
-                for (String l : piece.getLore()) lore.add(l.replace("&", "§"));
+                for (String l : piece.getLore())
+                    lore.add(l.replace("&", "§"));
             }
             lore.add("");
             if (isAdmin) {
@@ -96,24 +98,29 @@ public class GuiManager implements Listener {
 
     @EventHandler
     public void onInventoryClick(InventoryClickEvent event) {
-        if (!(event.getWhoClicked() instanceof Player)) return;
+        if (!(event.getWhoClicked() instanceof Player))
+            return;
 
         Player player = (Player) event.getWhoClicked();
         String title = event.getView().getTitle();
 
         boolean isAdminShop = title.startsWith("§8Admin Shop: ");
-        if (!title.startsWith("§8Shop: ") && !isAdminShop) return;
+        if (!title.startsWith("§8Shop: ") && !isAdminShop)
+            return;
 
         event.setCancelled(true);
         ItemStack clicked = event.getCurrentItem();
-        if (clicked == null || clicked.getType() == Material.AIR) return;
+        if (clicked == null || clicked.getType() == Material.AIR)
+            return;
 
         ArmorSet set = null;
         String prefix = isAdminShop ? "§8Admin Shop: " : "§8Shop: ";
         for (ArmorSet s : plugin.getConfigManager().getArmorSets().values()) {
-            if (title.equals(prefix + s.getName())) set = s;
+            if (title.equals(prefix + s.getName()))
+                set = s;
         }
-        if (set == null) return;
+        if (set == null)
+            return;
 
         int slot = event.getSlot();
 
@@ -142,12 +149,17 @@ public class GuiManager implements Listener {
         }
 
         ArmorSet.ArmorPiece piece = null;
-        if (slot == 10) piece = set.getHead();
-        else if (slot == 12) piece = set.getChest();
-        else if (slot == 14) piece = set.getLegs();
-        else if (slot == 16) piece = set.getBoots();
+        if (slot == 10)
+            piece = set.getHead();
+        else if (slot == 12)
+            piece = set.getChest();
+        else if (slot == 14)
+            piece = set.getLegs();
+        else if (slot == 16)
+            piece = set.getBoots();
 
-        if (piece == null) return;
+        if (piece == null)
+            return;
 
         if (player.getInventory().firstEmpty() == -1) {
             player.sendMessage("§cYour inventory is full!");
@@ -171,7 +183,8 @@ public class GuiManager implements Listener {
     private boolean hasFragments(Player player, ArmorSet set, int amount) {
         int count = 0;
         for (ItemStack item : player.getInventory().getContents()) {
-            if (item != null && isFragment(item, set)) count += item.getAmount();
+            if (item != null && isFragment(item, set))
+                count += item.getAmount();
         }
         return count >= amount;
     }
@@ -187,19 +200,27 @@ public class GuiManager implements Listener {
                     item.setAmount(item.getAmount() - left);
                     left = 0;
                 }
-                if (left <= 0) break;
+                if (left <= 0)
+                    break;
             }
         }
     }
 
     private boolean isFragment(ItemStack item, ArmorSet set) {
-        if (item.getType() != set.getFragmentMaterial()) return false;
+        if (item.getType() != set.getFragmentMaterial())
+            return false;
         ItemMeta meta = item.getItemMeta();
-        if (meta == null) return false;
-        if (meta.hasCustomModelData() && meta.getCustomModelData() == set.getFragmentModelData()) return true;
+        if (meta == null)
+            return false;
+        if (meta.hasCustomModelData() && meta.getCustomModelData() == set.getFragmentModelData())
+            return true;
         return meta.hasDisplayName() && meta.getDisplayName().equals(set.getFragmentName().replace("&", "§"));
     }
-    public void giveItem(Player player, ArmorSet.ArmorPiece piece) { giveArmor(player, piece); }
+
+    public void giveItem(Player player, ArmorSet.ArmorPiece piece) {
+        giveArmor(player, piece);
+    }
+
     private void giveArmor(Player player, ArmorSet.ArmorPiece piece) {
         ItemStack item = new ItemStack(piece.getMaterial());
         ItemMeta meta = item.getItemMeta();
@@ -208,7 +229,8 @@ public class GuiManager implements Listener {
 
         if (piece.getLore() != null) {
             List<String> lore = new ArrayList<>();
-            for (String l : piece.getLore()) lore.add(l.replace("&", "§"));
+            for (String l : piece.getLore())
+                lore.add(l.replace("&", "§"));
             meta.setLore(lore);
         }
 

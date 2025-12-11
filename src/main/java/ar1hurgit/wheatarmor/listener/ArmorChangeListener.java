@@ -32,10 +32,12 @@ public class ArmorChangeListener implements Listener {
 
     @EventHandler
     public void onInventoryClick(InventoryClickEvent event) {
-        if (!(event.getWhoClicked() instanceof Player)) return;
+        if (!(event.getWhoClicked() instanceof Player))
+            return;
 
         // Only react if clicked slot is an armor slot
-        if (event.getSlot() < 36 || event.getSlot() > 39) return;
+        if (event.getSlot() < 36 || event.getSlot() > 39)
+            return;
 
         Player p = (Player) event.getWhoClicked();
         Bukkit.getScheduler().runTask(plugin, () -> checkArmor(p, false));
@@ -44,13 +46,16 @@ public class ArmorChangeListener implements Listener {
     @EventHandler
     public void onInteract(PlayerInteractEvent event) {
         // Only react if the player right-clicks with armor in hand
-        if (!event.getAction().name().contains("RIGHT_CLICK")) return;
+        if (!event.getAction().name().contains("RIGHT_CLICK"))
+            return;
 
         ItemStack item = event.getItem();
-        if (item == null) return;
+        if (item == null)
+            return;
 
         Material type = item.getType();
-        if (!isArmor(type)) return;
+        if (!isArmor(type))
+            return;
 
         Bukkit.getScheduler().runTask(plugin, () -> checkArmor(event.getPlayer(), false));
     }
@@ -67,7 +72,8 @@ public class ArmorChangeListener implements Listener {
         Map<String, Integer> counts = new HashMap<>();
 
         for (ItemStack item : armor) {
-            if (item == null || item.getType() == Material.AIR) continue;
+            if (item == null || item.getType() == Material.AIR)
+                continue;
 
             for (Map.Entry<String, ArmorSet> entry : plugin.getConfigManager().getArmorSets().entrySet()) {
                 if (isPiece(item, entry.getValue())) {
@@ -87,7 +93,8 @@ public class ArmorChangeListener implements Listener {
 
         // Prevent spam: only notify if state changed
         String oldState = lastState.get(player);
-        if (!forceSend && newState.equals(oldState)) return;
+        if (!forceSend && newState.equals(oldState))
+            return;
 
         lastState.put(player, newState);
 
@@ -103,9 +110,11 @@ public class ArmorChangeListener implements Listener {
     }
 
     private boolean match(ItemStack item, ArmorSet.ArmorPiece piece) {
-        if (item.getType() != piece.getMaterial()) return false;
+        if (item.getType() != piece.getMaterial())
+            return false;
         ItemMeta meta = item.getItemMeta();
-        if (meta == null) return false;
+        if (meta == null)
+            return false;
         return meta.hasCustomModelData() && meta.getCustomModelData() == piece.getModelData();
     }
 }

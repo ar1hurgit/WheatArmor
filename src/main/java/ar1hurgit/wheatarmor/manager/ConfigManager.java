@@ -14,7 +14,7 @@ import java.util.Map;
 public class ConfigManager {
     private final WheatArmor plugin;
     private final Map<String, ArmorSet> armorSets = new HashMap<>();
-    private final Map<Material, DropInfo> blockDrops = new HashMap<>();
+    private final Map<Material, List<DropInfo>> blockDrops = new HashMap<>();
 
     public ConfigManager(WheatArmor plugin) {
         this.plugin = plugin;
@@ -71,7 +71,7 @@ public class ConfigManager {
                     double chance = dropSection.getDouble("chance", 10.0);
                     String fragmentType = dropSection.getString("fragment-type", "wheat"); // Refers to armor set key
 
-                    blockDrops.put(mat, new DropInfo(chance, fragmentType));
+                    blockDrops.computeIfAbsent(mat, k -> new ArrayList<>()).add(new DropInfo(chance, fragmentType));
                 } catch (IllegalArgumentException e) {
                     plugin.getLogger().warning("Invalid material in drops config: " + key);
                 }
@@ -103,7 +103,7 @@ public class ConfigManager {
         return armorSets;
     }
 
-    public DropInfo getDropInfo(Material material) {
+    public List<DropInfo> getDropInfo(Material material) {
         return blockDrops.get(material);
     }
 

@@ -4,25 +4,34 @@ main: ar1hurgit.wheatarmor.WheatArmor
 api-version: '1.21'
 commands:
   wheatarmor:
-    description: Open Wheat Armor shop
+    description: Open the Wheat Armor shop
     usage: /wheatarmor
+    permission: wheatarmor.use
   wheatarmoradmin:
     description: Admin Wheat Armor shop
     usage: /wheatarmor admin
-
   woodarmor:
-    description: Open Wood Armor shop
+    description: Open the Wood Armor shop
     usage: /woodarmor
+    permission: wheatarmor.use
   woodarmoradmin:
     description: Admin Wood Armor shop
     usage: /woodarmor admin
-
   cavearmor:
-    description: Open Cave Armor shop
+    description: Open the Cave Armor shop
     usage: /cavearmor
+    permission: wheatarmor.use
   cavearmoradmin:
     description: Admin Cave Armor shop
     usage: /cavearmor admin
+  richearmor:
+    description: Open the Rich Armor shop
+    usage: /richearmor
+    permission: wheatarmor.use
+  sagearmor:
+    description: Open the Sage Armor shop
+    usage: /sagearmor
+    permission: wheatarmor.use
 
   wheatarmoradmingive:
     description: Give armor to a player

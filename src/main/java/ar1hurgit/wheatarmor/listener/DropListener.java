@@ -22,15 +22,18 @@ public class DropListener implements Listener {
 
     @EventHandler
     public void onBlockBreak(BlockBreakEvent event) {
-        ConfigManager.DropInfo dropInfo = plugin.getConfigManager().getDropInfo(event.getBlock().getType());
+        java.util.List<ConfigManager.DropInfo> dropInfos = plugin.getConfigManager()
+                .getDropInfo(event.getBlock().getType());
 
-        if (dropInfo != null) {
-            double roll = random.nextDouble() * 100;
-            if (roll <= dropInfo.getChance()) {
-                ArmorSet set = plugin.getConfigManager().getArmorSet(dropInfo.getFragmentType());
-                if (set != null) {
-                    ItemStack fragment = createFragment(set);
-                    event.getBlock().getWorld().dropItemNaturally(event.getBlock().getLocation(), fragment);
+        if (dropInfos != null) {
+            for (ConfigManager.DropInfo dropInfo : dropInfos) {
+                double roll = random.nextDouble() * 100;
+                if (roll <= dropInfo.getChance()) {
+                    ArmorSet set = plugin.getConfigManager().getArmorSet(dropInfo.getFragmentType());
+                    if (set != null) {
+                        ItemStack fragment = createFragment(set);
+                        event.getBlock().getWorld().dropItemNaturally(event.getBlock().getLocation(), fragment);
+                    }
                 }
             }
         }

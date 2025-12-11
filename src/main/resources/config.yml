@@ -105,206 +105,505 @@ armor-sets:
       model-data: 1003
       lore:
         - "&7Forged in the depths."
+  riche:
+    fragment:
+      name: "&eMoney fragment"
+      material: GHAST_TEAR
+      model-data: 1004
+      lore:
+        - "&7Used to buy Rich armor"
+    head:
+      name: "&eRich Helmet"
+      material: GOLDEN_HELMET
+      price: 50
+      model-data: 1004
+      lore:
+        - "&7A helmet"
+    chest:
+      name: "&eRich Chestplate"
+      material: GOLDEN_CHESTPLATE
+      price: 80
+      model-data: 1004
+      lore:
+        - "&7A chestplate"
+    legs:
+      name: "&eRich Leggings"
+      material: GOLDEN_LEGGINGS
+      price: 70
+      model-data: 1004
+      lore:
+        - "&7Leggings"
+    boots:
+      name: "&eRich Boots"
+      material: GOLDEN_BOOTS
+      price: 40
+      model-data: 1004
+      lore:
+        - "&7Boots"
+  sage:
+    fragment:
+      name: "&asage Fragment"
+      material: GHAST_TEAR
+      model-data: 1005
+      lore:
+        - "&7Used to buy Sage Armor"
+    head:
+      name: "&aSage Helmet"
+      material: DIAMOND_HELMET
+      price: 100
+      model-data: 1005
+      lore:
+        - "&7Wisdom in a helmet."
+    chest:
+      name: "&aSage Chestplate"
+      material: DIAMOND_CHESTPLATE
+      price: 160
+      model-data: 1005
+      lore:
+        - "&7Wisdom in a chestplate."
+    legs:
+      name: "&aSage Leggings"
+      material: DIAMOND_LEGGINGS
+      price: 140
+      model-data: 1005
+      lore:
+        - "&7Wisdom in leggings."
+    boots:
+      name: "&aSage Boots"
+      material: DIAMOND_BOOTS
+      price: 80
+      model-data: 1005
+      lore:
+        - "&7Wisdom in boots."
 
 drops:
-  # Crops -> Wheat Fragment
+  # Crops -> Wheat Fragment & Riche Fragment & Sage Fragment
   wheat_drop:
     block: WHEAT
     chance: 25.0
     fragment-type: wheat
+  wheat_drop_riche:
+    block: WHEAT
+    chance: 10.0
+    fragment-type: riche
+  wheat_drop_sage:
+    block: WHEAT
+    chance: 5.0
+    fragment-type: sage
+
   carrots_drop:
     block: CARROTS
     chance: 25.0
     fragment-type: wheat
+  carrots_drop_riche:
+    block: CARROTS
+    chance: 10.0
+    fragment-type: riche
+  carrots_drop_sage:
+    block: CARROTS
+    chance: 5.0
+    fragment-type: sage
+
   potatoes_drop:
     block: POTATOES
     chance: 25.0
     fragment-type: wheat
+  potatoes_drop_riche:
+    block: POTATOES
+    chance: 10.0
+    fragment-type: riche
+  potatoes_drop_sage:
+    block: POTATOES
+    chance: 5.0
+    fragment-type: sage
+
   beetroots_drop:
     block: BEETROOTS
     chance: 25.0
     fragment-type: wheat
+  beetroots_drop_riche:
+    block: BEETROOTS
+    chance: 10.0
+    fragment-type: riche
+  beetroots_drop_sage:
+    block: BEETROOTS
+    chance: 5.0
+    fragment-type: sage
+
   sugar_cane_drop:
     block: SUGAR_CANE
     chance: 25.0
     fragment-type: wheat
+  sugar_cane_drop_riche:
+    block: SUGAR_CANE
+    chance: 10.0
+    fragment-type: riche
+  sugar_cane_drop_sage:
+    block: SUGAR_CANE
+    chance: 5.0
+    fragment-type: sage
+
   nether_wart_drop:
     block: NETHER_WART
     chance: 25.0
     fragment-type: wheat
-  tube_coral_drop:
-    block: TUBE_CORAL
-    chance: 25.0
-    fragment-type: wheat
-  brain_coral_drop:
-    block: BRAIN_CORAL
-    chance: 25.0
-    fragment-type: wheat
-  bubble_coral_drop:
-    block: BUBBLE_CORAL
-    chance: 25.0
-    fragment-type: wheat
-  fire_coral_drop:
-    block: FIRE_CORAL
-    chance: 25.0
-    fragment-type: wheat
-  horn_coral_drop:
-    block: HORN_CORAL
-    chance: 25.0
-    fragment-type: wheat
-  dead_bush_drop:
-    block: DEAD_BUSH
+  nether_wart_drop_riche:
+    block: NETHER_WART
     chance: 10.0
-    fragment-type: wheat
-  pale_oak_sapling_drop:
-    block: PALE_OAK_SAPLING
-    chance: 25.0
-    fragment-type: wheat
-  cherry_sapling_drop:
-    block: CHERRY_SAPLING
-    chance: 25.0
-    fragment-type: wheat
-  pink_petals_drop:
-    block: PINK_PETALS
-    chance: 25.0
-    fragment-type: wheat
-  
-  # Wood -> Wood Fragment
+    fragment-type: riche
+  nether_wart_drop_sage:
+    block: NETHER_WART
+    chance: 5.0
+    fragment-type: sage
+
+  # Wood -> Wood Fragment & Riche Fragment & Sage Fragment
   oak_log_drop:
     block: OAK_LOG
     chance: 20.0
     fragment-type: wood
+  oak_log_drop_riche:
+    block: OAK_LOG
+    chance: 10.0
+    fragment-type: riche
+  oak_log_drop_sage:
+    block: OAK_LOG
+    chance: 5.0
+    fragment-type: sage
+
   spruce_log_drop:
     block: SPRUCE_LOG
     chance: 20.0
     fragment-type: wood
+  spruce_log_drop_riche:
+    block: SPRUCE_LOG
+    chance: 10.0
+    fragment-type: riche
+  spruce_log_drop_sage:
+    block: SPRUCE_LOG
+    chance: 5.0
+    fragment-type: sage
+
   birch_log_drop:
     block: BIRCH_LOG
     chance: 20.0
     fragment-type: wood
+  birch_log_drop_riche:
+    block: BIRCH_LOG
+    chance: 10.0
+    fragment-type: riche
+  birch_log_drop_sage:
+    block: BIRCH_LOG
+    chance: 5.0
+    fragment-type: sage
+
   jungle_log_drop:
     block: JUNGLE_LOG
     chance: 20.0
     fragment-type: wood
+  jungle_log_drop_riche:
+    block: JUNGLE_LOG
+    chance: 10.0
+    fragment-type: riche
+  jungle_log_drop_sage:
+    block: JUNGLE_LOG
+    chance: 5.0
+    fragment-type: sage
+
   dark_oak_log_drop:
     block: DARK_OAK_LOG
     chance: 20.0
     fragment-type: wood
+  dark_oak_log_drop_riche:
+    block: DARK_OAK_LOG
+    chance: 10.0
+    fragment-type: riche
+  dark_oak_log_drop_sage:
+    block: DARK_OAK_LOG
+    chance: 5.0
+    fragment-type: sage
+
   acacia_log_drop:
     block: ACACIA_LOG
     chance: 20.0
     fragment-type: wood
+  acacia_log_drop_riche:
+    block: ACACIA_LOG
+    chance: 10.0
+    fragment-type: riche
+  acacia_log_drop_sage:
+    block: ACACIA_LOG
+    chance: 5.0
+    fragment-type: sage
+
   cherry_log_drop:
     block: CHERRY_LOG
     chance: 20.0
     fragment-type: wood
+  cherry_log_drop_riche:
+    block: CHERRY_LOG
+    chance: 10.0
+    fragment-type: riche
+  cherry_log_drop_sage:
+    block: CHERRY_LOG
+    chance: 5.0
+    fragment-type: sage
+
   mangrove_log_drop:
     block: MANGROVE_LOG
     chance: 20.0
     fragment-type: wood
+  mangrove_log_drop_riche:
+    block: MANGROVE_LOG
+    chance: 10.0
+    fragment-type: riche
+  mangrove_log_drop_sage:
+    block: MANGROVE_LOG
+    chance: 5.0
+    fragment-type: sage
+
   pale_oak_log_drop:
     block: PALE_OAK_LOG
     chance: 20.0
     fragment-type: wood
-  crimson_stem_drop:
-    block: CRIMSON_STEM
-    chance: 20.0
-    fragment-type: wood
-  warped_stem_drop:
-    block: WARPED_STEM
-    chance: 20.0
-    fragment-type: wood
-    
-  # Ores -> Cave Fragment
+  pale_oak_log_drop_riche:
+    block: PALE_OAK_LOG
+    chance: 10.0
+    fragment-type: riche
+  pale_oak_log_drop_sage:
+    block: PALE_OAK_LOG
+    chance: 5.0
+    fragment-type: sage
+  # Ores -> Cave Fragment & Riche Fragment & Sage Fragment
   iron_ore_drop:
     block: IRON_ORE
     chance: 15.0
     fragment-type: cave
+  iron_ore_drop_riche:
+    block: IRON_ORE
+    chance: 10.0
+    fragment-type: riche
+  iron_ore_drop_sage:
+    block: IRON_ORE
+    chance: 5.0
+    fragment-type: sage
+
   deepslate_iron_ore_drop:
     block: DEEPSLATE_IRON_ORE
     chance: 15.0
     fragment-type: cave
+  deepslate_iron_ore_drop_riche:
+    block: DEEPSLATE_IRON_ORE
+    chance: 10.0
+    fragment-type: riche
+  deepslate_iron_ore_drop_sage:
+    block: DEEPSLATE_IRON_ORE
+    chance: 5.0
+    fragment-type: sage
+
   gold_ore_drop:
     block: GOLD_ORE
     chance: 10.0
     fragment-type: cave
+  gold_ore_drop_riche:
+    block: GOLD_ORE
+    chance: 15.0
+    fragment-type: riche
+  gold_ore_drop_sage:
+    block: GOLD_ORE
+    chance: 5.0
+    fragment-type: sage
+
   deepslate_gold_ore_drop:
     block: DEEPSLATE_GOLD_ORE
     chance: 10.0
     fragment-type: cave
+  deepslate_gold_ore_drop_riche:
+    block: DEEPSLATE_GOLD_ORE
+    chance: 15.0
+    fragment-type: riche
+  deepslate_gold_ore_drop_sage:
+    block: DEEPSLATE_GOLD_ORE
+    chance: 5.0
+    fragment-type: sage
+
   nether_gold_ore_drop:
     block: NETHER_GOLD_ORE
     chance: 15.0
     fragment-type: cave
+  nether_gold_ore_drop_riche:
+    block: NETHER_GOLD_ORE
+    chance: 15.0
+    fragment-type: riche
+  nether_gold_ore_drop_sage:
+    block: NETHER_GOLD_ORE
+    chance: 5.0
+    fragment-type: sage
+
   copper_ore_drop:
     block: COPPER_ORE
     chance: 20.0
     fragment-type: cave
+  copper_ore_drop_riche:
+    block: COPPER_ORE
+    chance: 10.0
+    fragment-type: riche
+  copper_ore_drop_sage:
+    block: COPPER_ORE
+    chance: 5.0
+    fragment-type: sage
+
   deepslate_copper_ore_drop:
     block: DEEPSLATE_COPPER_ORE
     chance: 20.0
     fragment-type: cave
+  deepslate_copper_ore_drop_riche:
+    block: DEEPSLATE_COPPER_ORE
+    chance: 10.0
+    fragment-type: riche
+  deepslate_copper_ore_drop_sage:
+    block: DEEPSLATE_COPPER_ORE
+    chance: 5.0
+    fragment-type: sage
+
   coal_ore_drop:
     block: COAL_ORE
     chance: 20.0
     fragment-type: cave
+  coal_ore_drop_riche:
+    block: COAL_ORE
+    chance: 10.0
+    fragment-type: riche
+  coal_ore_drop_sage:
+    block: COAL_ORE
+    chance: 5.0
+    fragment-type: sage
+
   deepslate_coal_ore_drop:
     block: DEEPSLATE_COAL_ORE
     chance: 20.0
     fragment-type: cave
+  deepslate_coal_ore_drop_riche:
+    block: DEEPSLATE_COAL_ORE
+    chance: 10.0
+    fragment-type: riche
+  deepslate_coal_ore_drop_sage:
+    block: DEEPSLATE_COAL_ORE
+    chance: 5.0
+    fragment-type: sage
+
   redstone_ore_drop:
     block: REDSTONE_ORE
     chance: 15.0
     fragment-type: cave
+  redstone_ore_drop_riche:
+    block: REDSTONE_ORE
+    chance: 10.0
+    fragment-type: riche
+  redstone_ore_drop_sage:
+    block: REDSTONE_ORE
+    chance: 5.0
+    fragment-type: sage
+
   deepslate_redstone_ore_drop:
     block: DEEPSLATE_REDSTONE_ORE
     chance: 15.0
     fragment-type: cave
+  deepslate_redstone_ore_drop_riche:
+    block: DEEPSLATE_REDSTONE_ORE
+    chance: 10.0
+    fragment-type: riche
+  deepslate_redstone_ore_drop_sage:
+    block: DEEPSLATE_REDSTONE_ORE
+    chance: 5.0
+    fragment-type: sage
+
   lapis_ore_drop:
     block: LAPIS_ORE
     chance: 15.0
     fragment-type: cave
+  lapis_ore_drop_riche:
+    block: LAPIS_ORE
+    chance: 10.0
+    fragment-type: riche
+  lapis_ore_drop_sage:
+    block: LAPIS_ORE
+    chance: 5.0
+    fragment-type: sage
+
   deepslate_lapis_ore_drop:
     block: DEEPSLATE_LAPIS_ORE
     chance: 15.0
     fragment-type: cave
+  deepslate_lapis_ore_drop_riche:
+    block: DEEPSLATE_LAPIS_ORE
+    chance: 10.0
+    fragment-type: riche
+  deepslate_lapis_ore_drop_sage:
+    block: DEEPSLATE_LAPIS_ORE
+    chance: 5.0
+    fragment-type: sage
+
   emerald_ore_drop:
     block: EMERALD_ORE
     chance: 5.0
     fragment-type: cave
+  emerald_ore_drop_riche:
+    block: EMERALD_ORE
+    chance: 15.0
+    fragment-type: riche
+  emerald_ore_drop_sage:
+    block: EMERALD_ORE
+    chance: 5.0
+    fragment-type: sage
+
   deepslate_emerald_ore_drop:
     block: DEEPSLATE_EMERALD_ORE
     chance: 5.0
     fragment-type: cave
+  deepslate_emerald_ore_drop_riche:
+    block: DEEPSLATE_EMERALD_ORE
+    chance: 15.0
+    fragment-type: riche
+  deepslate_emerald_ore_drop_sage:
+    block: DEEPSLATE_EMERALD_ORE
+    chance: 5.0
+    fragment-type: sage
+
   diamond_ore_drop:
     block: DIAMOND_ORE
     chance: 5.0
     fragment-type: cave
+  diamond_ore_drop_riche:
+    block: DIAMOND_ORE
+    chance: 10.0
+    fragment-type: riche
+  diamond_ore_drop_sage:
+    block: DIAMOND_ORE
+    chance: 10.0
+    fragment-type: sage
+
   deepslate_diamond_ore_drop:
     block: DEEPSLATE_DIAMOND_ORE
     chance: 5.0
     fragment-type: cave
+  deepslate_diamond_ore_drop_riche:
+    block: DEEPSLATE_DIAMOND_ORE
+    chance: 10.0
+    fragment-type: riche
+  deepslate_diamond_ore_drop_sage:
+    block: DEEPSLATE_DIAMOND_ORE
+    chance: 10.0
+    fragment-type: sage
+
   amethyst_block_drop:
     block: AMETHYST_BLOCK
     chance: 15.0
     fragment-type: cave
-  red_glazed_terracotta_drop:
-    block: RED_GLAZED_TERRACOTTA
-    chance: 15.0
-    fragment-type: cave
-  lime_glazed_terracotta_drop:
-    block: LIME_GLAZED_TERRACOTTA
-    chance: 15.0
-    fragment-type: cave
-  light_blue_glazed_terracotta_drop:
-    block: LIGHT_BLUE_GLAZED_TERRACOTTA
-    chance: 15.0
-    fragment-type: cave
-  purple_glazed_terracotta_drop:
-    block: PURPLE_GLAZED_TERRACOTTA
-    chance: 15.0
-    fragment-type: cave
-  honeycomb_block_drop:
-    block: HONEYCOMB_BLOCK
-    chance: 15.0
-    fragment-type: cave
+  amethyst_block_drop_riche:
+    block: AMETHYST_BLOCK
+    chance: 10.0
+    fragment-type: riche
+  amethyst_block_drop_sage:
+    block: AMETHYST_BLOCK
+    chance: 5.0
+    fragment-type: sage
